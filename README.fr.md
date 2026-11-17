@@ -24,6 +24,8 @@ Dès l’ouverture, **on voit le doigt bouger** sur la planche. L’action princ
 
 L’interface et les contenus prédéfinis sont disponibles en **espagnol et en français**. Le PDF suit la langue de l’interface. Le texte saisi librement par un professionnel n’est pas traduit automatiquement afin d’en préserver le sens clinique.
 
+Pour partager un lien qui s’ouvre directement en français, ajoutez `?lang=fr` à la fin de l’adresse (ou `?lang=es` pour l’espagnol).
+
 ## Planche et exportations
 
 - Planche **400 × 300 mm**, 165 trous, 15 colonnes A–O, 11 rangées 1–11, entraxe 25 mm.

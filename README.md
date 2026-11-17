@@ -24,6 +24,8 @@ Al entrar, **la mano se mueve en el propio tablero**. La primera acción es **«
 
 La interfaz, la demostración y las etiquetas dinámicas se ofrecen en **español y francés** (ES / FR), incluido el PDF exportado. Los textos libres escritos por un profesional nunca se traducen automáticamente para evitar cambios de sentido clínico.
 
+Para mandar un enlace que se abra directamente en francés, añade `?lang=fr` al final de la dirección (o `?lang=es` para español).
+
 ## Tablero y archivos
 
 - Tablero **400 × 300 mm**, 165 agujeros, 15 columnas A–O y 11 filas 1–11, centros a 25 mm.

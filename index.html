@@ -2944,6 +2944,11 @@ footer{font-size:11px;line-height:1.5}
   const UI_LANG_KEY="tabla-canadiense-idioma-v1";
   let UI_LANG="es";
   try{if(localStorage.getItem(UI_LANG_KEY)==="fr")UI_LANG="fr";}catch(e){}
+  // Un enlace con ?lang=fr, ?lang=es, #fr o #es abre la página en ese idioma.
+  try{
+    const urlLang=(new URLSearchParams(location.search).get("lang")||location.hash.replace("#","")).toLowerCase();
+    if(urlLang==="fr"||urlLang==="es")UI_LANG=urlLang;
+  }catch(e){}
   function transPhrase(source){
     const original=String(source),clean=original.trim();
     if(UI_LANG!=="fr"||!clean)return original;
