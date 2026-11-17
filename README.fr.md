@@ -8,7 +8,7 @@
 
 ![Démonstration sur mobile, en français](docs/movil-fr.png)
 
-> **Important.** C’est une simulation illustrative, **pas une prescription d’exercices**. Les exercices, les angles et la progression sont décidés par le thérapeute de la main ou le chirurgien.
+> **Avertissement.** Ceci est **uniquement une démonstration illustrative**. **Ce n’est ni un dispositif médical, ni un outil médical, ni un avis médical.** Elle ne remplace ni le médecin ni le thérapeute. Les exercices, les angles et la progression sont toujours décidés par un professionnel de santé. Voir les [mentions légales](#mentions-légales).
 
 ## Le problème résolu
 
@@ -117,6 +117,14 @@ python tests/smoke.py
 
 Les propositions sont les bienvenues, surtout de la part de thérapeutes de la main : nouveaux exercices, autres doigts, améliorations de textes ou traductions. Ouvrez un ticket ou une pull request en expliquant le changement. Toute modification de la logique clinique (angles, ordre de la série, règles de progression) doit être justifiée par des protocoles de rééducation de la main.
 
+## Mentions légales
+
+Ce projet est **une démonstration à visée illustrative et pédagogique**. Ce n’est ni un dispositif médical ni un produit de santé, il n’a pas été validé cliniquement et ne fournit aucun diagnostic, traitement ni avis médical.
+
+Il est fourni **« en l’état », sans aucune garantie**, expresse ou implicite, notamment d’exactitude, d’utilité ou d’adéquation à un usage particulier. Toute personne qui l’utilise, ou qui fabrique ou utilise une planche à partir de celui-ci, le fait **sous sa seule responsabilité**. Les auteurs et contributeurs **déclinent toute responsabilité pour tout dommage, blessure ou préjudice**, direct ou indirect, résultant de son utilisation ou de l’impossibilité de l’utiliser.
+
+En cas de doute sur une blessure ou un exercice, consultez votre médecin ou votre thérapeute.
+
 ## Licence
 
-MIT. Voir [`LICENSE`](LICENSE). Fournie sans garantie d’efficacité clinique.
+MIT. Voir [`LICENSE`](LICENSE).

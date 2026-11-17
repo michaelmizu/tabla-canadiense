@@ -8,7 +8,7 @@
 
 ![Portada: el índice se mueve sobre la tabla hacia la bola diana](docs/inicio.png)
 
-> **Importante.** Es una simulación orientativa, **no una pauta de ejercicios**. Los ejercicios, los ángulos y la progresión los decide el terapeuta de mano o el cirujano.
+> **Aviso.** Esto es **solo una demo ilustrativa**. **No es un producto sanitario, no es una herramienta médica y no da consejo médico.** No sustituye al médico ni al terapeuta. Los ejercicios, los ángulos y la progresión los decide siempre un profesional sanitario. Consulta el [aviso legal](#aviso-legal).
 
 ## Qué problema resuelve
 
@@ -117,6 +117,14 @@ Son **54 comprobaciones automáticas**: animación, pausa y barra de recorrido, 
 
 Las propuestas son bienvenidas, sobre todo de terapeutas de mano: ejercicios nuevos, otros dedos, mejoras de texto o traducciones. Abre una incidencia o un pull request explicando el cambio. Cualquier cambio en la lógica clínica (ángulos, orden de la serie o reglas de progresión) debe justificarse con protocolos de terapia de mano.
 
+## Aviso legal
+
+Este proyecto es **una demo con fines ilustrativos y educativos**. No es un producto sanitario ni un dispositivo médico, no ha sido validado clínicamente y no ofrece diagnóstico, tratamiento ni consejo médico de ningún tipo.
+
+Se ofrece **"tal cual", sin garantías de ningún tipo**, expresas o implícitas, incluidas la exactitud, la utilidad o la adecuación a un fin concreto. Quien la use, o fabrique o utilice una tabla a partir de ella, lo hace **bajo su propia responsabilidad**. Los autores y colaboradores **no se hacen responsables de ningún daño, lesión o perjuicio**, directo o indirecto, derivado de su uso o de la imposibilidad de usarla.
+
+Ante cualquier duda sobre una lesión o un ejercicio, consulta con tu médico o tu terapeuta.
+
 ## Licencia
 
-MIT. Consulta [`LICENSE`](LICENSE). Se ofrece sin garantía de eficacia clínica.
+MIT. Consulta [`LICENSE`](LICENSE).
