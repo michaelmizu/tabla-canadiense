@@ -1,0 +1,10 @@
+# Salidas de pruebas y archivos locales
+__pycache__/
+.pytest_cache/
+.playwright/
+*.pyc
+*.log
+.DS_Store
+Thumbs.db
+out/
+backups/
