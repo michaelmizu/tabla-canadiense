@@ -1,52 +1,99 @@
-# Tabla canadiense — movimiento primero
+# Tabla canadiense: movimiento primero
 
-**Una aplicación visual para entender cómo se mueve el índice y dónde se colocan los palos de una tabla de rehabilitación.** La simulación es orientativa: **no es una pauta de ejercicios**. Los ejercicios y el montaje real deben estar autorizados y revisados por el terapeuta de mano.
+**Aplicación web gratuita que enseña cómo se mueve el dedo índice sobre una tabla de rehabilitación perforada y en qué agujero va cada palo.** El fisioterapeuta prepara la pauta, se la envía al paciente con un código y el paciente ve su tabla montada tal cual para hacer los ejercicios en casa.
+
+**Probarla:** [michaelmizu.github.io/tabla-canadiense](https://michaelmizu.github.io/tabla-canadiense/) · [Version française](https://michaelmizu.github.io/tabla-canadiense/?lang=fr)
 
 [Français](README.fr.md) · [Cambios de la v10](CAMBIOS_v10.md) · [Revisión de usabilidad](REVISION_UX_v10.md)
 
-## Abrir
+![Portada: el índice se mueve sobre la tabla hacia la bola diana](docs/inicio.png)
 
-Abre `index.html` directamente en un navegador moderno. No necesitas instalar nada, conectar a Internet ni compilar. Toda la aplicación es **un solo archivo HTML**, con CSS, JavaScript y SVG integrados; no tiene librerías externas.
+> **Importante.** Es una simulación orientativa, **no una pauta de ejercicios**. Los ejercicios, los ángulos y la progresión los decide el terapeuta de mano o el cirujano.
 
-### La nueva experiencia
+## Qué problema resuelve
 
-Al entrar, **la mano se mueve en el propio tablero**. La primera acción es **«Ver demostración»**. Esto abre el ejemplo de **«Diana con bola»** directamente, en movimiento, sin pasar por la pantalla de preparación estática. Puedes:
+En terapia de mano se usa a menudo una **tabla canadiense**: un tablero con agujeros donde se clavan palos que hacen de topes. Los palos sujetan el antebrazo y la mano, y marcan hasta dónde se dobla o se estira un dedo. En consulta lo monta el terapeuta en un minuto. En casa, el paciente no recuerda dónde iba cada palo ni cómo era el movimiento.
 
-- **Pausar / reproducir** el movimiento con un botón visible sobre el tablero.
-- **Mover el dedo manualmente** usando la barra «Explora el recorrido» (también con teclado).
-- Cambiar entre **planta** y **montaje 3D**, y consultar los agujeros de los palos y los pasos de la serie.
-- Elegir **«Tengo una pauta»** y pegar el código `TABLA1` recibido del terapeuta.
-- Abrir **«Soy terapeuta»** para ajustar medidas, ejercicios, plantillas y exportaciones.
+Esta aplicación lo resuelve de forma visual:
 
-**Los movimientos de demostración no deben imitarse como tratamiento.** Al cargar una pauta real, la animación **no comienza automáticamente**. Si el sistema indica «reducir movimiento», la reproducción automática queda desactivada.
+- **Dibuja la tabla vista desde arriba**, con la mano de canto (meñique abajo, pulgar hacia arriba), los palos numerados y el nombre de cada agujero (de A1 a O11).
+- **Anima el movimiento del dedo** para que se entienda qué hay que hacer, y permite recorrerlo paso a paso.
+- **Traduce la pauta del terapeuta** (ángulos, repeticiones, tandas, aguante) a una lista de agujeros que cualquiera puede montar.
+
+## Para quién es
+
+- **Pacientes** que tienen que repetir en casa ejercicios de tabla canadiense pautados por su terapeuta.
+- **Fisioterapeutas y terapeutas de mano** que quieren mandar una pauta clara, visual y reproducible, sin dibujarla a mano.
+- **Quien quiera fabricar la tabla**: la aplicación genera la plantilla de taladrado.
+
+## Cómo se usa
+
+En la portada hay tres caminos:
+
+1. **Ver demostración.** Abre un ejemplo animado de la serie para entender la idea. Solo es ilustrativo.
+2. **Tengo una pauta.** El paciente pega el código `TABLA1` que le ha mandado su terapeuta y ve su tabla con los agujeros, los ángulos y las repeticiones.
+3. **Soy terapeuta.** Da acceso a las medidas de la mano, al editor de ejercicios, a las plantillas y a las exportaciones.
+
+![Demostración: ejercicio, palos que colocar y animación del movimiento](docs/demostracion.png)
+
+### La serie de ejemplo
+
+| Paso | Ejercicio | Qué hace |
+|---|---|---|
+| 1 | Preparación | Calor y masaje antes de empezar, y montaje de los palos que sujetan antebrazo y mano. |
+| 2 | Bloqueo de la 2ª articulación | Un palo bajo la falange de la base deja quieto el nudillo y solo se dobla la articulación del medio. |
+| 3 | Diana con bola | Se toca una bola con la yema. Cuando sale fácil, la bola se aleja un agujero: progresión por niveles. |
+| 4 | Estirar al tope | Un palo marca dónde queda la uña con el dedo totalmente recto, para comprobar que no se pierde extensión. |
+
+El terapeuta puede cambiar esta serie, añadir ejercicios propios y fijar ángulos y dosis.
+
+### La pauta compartible
+
+El terapeuta ajusta la pauta y pulsa **Copiar pauta**. Sale un texto legible con los agujeros y un código `TABLA1` al final, que puede mandar por WhatsApp o correo. El paciente lo pega en **Tengo una pauta** y la aplicación reconstruye la tabla. El código lleva una suma de comprobación que detecta cambios accidentales. **No autentica al terapeuta.**
+
+## Cómo funciona por dentro
+
+- **Cinemática 2D** de la muñeca, el metacarpiano y las tres falanges del índice, con medidas ajustables y mano izquierda o derecha.
+- **Detección de colisiones** entre el dedo, los palos y la bola.
+- **Colocación automática de los palos** en la rejilla de agujeros, con el grosor de espuma necesario para que apoyen en la piel.
+- **Niveles de la diana**: se barre la flexión del dedo y se ordenan los agujeros según el momento en que la yema toca la bola.
+- **Vista de montaje 3D** orientativa, con la altura de los palos.
+
+## Fabricar la tabla
+
+| Pieza | Medidas |
+|---|---|
+| Tablero | Contrachapado de abedul de 18 mm, 400 × 300 mm, con una segunda capa debajo para que los agujeros queden ciegos |
+| Agujeros | 165, en 15 columnas (A–O) y 11 filas (1–11), a 25 mm entre centros. Ø12,2 mm por defecto, u Ø12,0 mm |
+| Palos | Varilla de haya de Ø12 mm, unos 13 cm por encima del tablero |
+| Espuma | Funda de coquilla aislante de 80 mm en los palos que tocan la piel |
+| Bola diana | Bola pequeña de Ø30 mm (porexpán, goma o de Navidad), taladrada a 12 mm |
+
+Desde la aplicación se descarga la **plantilla de taladrado en SVG a escala 1:1** y en **DXF en milímetros**, lista para CNC, láser o para imprimir y marcar a mano.
+
+## Exportaciones
+
+- **Plantilla del tablero** en SVG 1:1 y DXF.
+- **Pauta en PDF A4** de una página, en el idioma de la interfaz.
+- **Código `TABLA1`** para compartir la pauta, compatible con códigos de versiones anteriores.
 
 ## Idiomas
 
-La interfaz, la demostración y las etiquetas dinámicas se ofrecen en **español y francés** (ES / FR), incluido el PDF exportado. Los textos libres escritos por un profesional nunca se traducen automáticamente para evitar cambios de sentido clínico.
+La interfaz, la demostración, las etiquetas y el PDF están en **español y francés**. Los textos libres que escribe el terapeuta no se traducen automáticamente, para no cambiar su sentido clínico.
 
-Para mandar un enlace que se abra directamente en francés, añade `?lang=fr` al final de la dirección (o `?lang=es` para español).
+Para mandar un enlace que se abra directamente en francés, añade `?lang=fr` al final de la dirección, o `?lang=es` para español.
 
-## Tablero y archivos
+## Abrirla sin internet
 
-- Tablero **400 × 300 mm**, 165 agujeros, 15 columnas A–O y 11 filas 1–11, centros a 25 mm.
-- Exportación de **SVG a tamaño 1:1** y **DXF en milímetros** con agujeros de Ø12,2 mm (por defecto) u Ø12,0 mm.
-- PDF A4 de una página cuando la pauta cabe legiblemente.
-- Pautas con código `TABLA1`, incluida compatibilidad con códigos previos. La suma de comprobación detecta cambios accidentales, **no autentica al terapeuta**.
-- Plantillas del profesional en `localStorage`. No hay diario de dolor ni gráfico de progreso. Si existen registros de versiones anteriores, se ofrecen opciones de exportación y borrado manual.
+Toda la aplicación es **un solo archivo**, `index.html`, con el CSS, el JavaScript y el SVG dentro. No usa librerías externas ni necesita instalación o compilación. Se puede descargar y abrir directamente en el navegador, sin conexión.
 
 ## Seguridad clínica y privacidad
 
-Este visualizador **no sustituye al cirujano ni al terapeuta de mano**, ni valida la fase postoperatoria, la estabilidad de una reparación o los puntos reales de contacto. La silueta y el movimiento están calculados para el índice; las alturas de la vista 3D son orientativas. Los controles de la app no pueden descartar todas las compresiones o interferencias físicas. La colocación de palos y espuma debe comprobarse en la tabla real.
-
-El calor y el masaje requieren herida cerrada/seca y autorización del terapeuta. No realizar ejercicios ni progresar de nivel por el mero hecho de ver la animación. Si aparece chasquido, nueva pérdida de extensión, dolor o hinchazón inesperados, suspender y consultar al equipo tratante.
-
-Los datos de `localStorage` permanecen en el navegador y no se sincronizan. **No publiques pautas reales de pacientes** en repositorios ni en GitHub Pages.
-
-## GitHub Pages
-
-1. Sube los archivos del repositorio a la rama `main`.
-2. En **Settings → Pages**, selecciona **Deploy from a branch**, `main` y `/(root)`.
-3. Una vez publicada, podrás abrir la página desde la URL de GitHub Pages del repositorio.
+- **No sustituye al cirujano ni al terapeuta de mano.** No valida la fase de recuperación, la estabilidad de una reparación ni los puntos de contacto reales. La colocación de palos y espuma se comprueba siempre sobre la tabla real.
+- **El calor y el masaje** solo con la herida cerrada y seca, y con autorización del terapeuta.
+- **Si aparece** un chasquido, una nueva pérdida de extensión, dolor o hinchazón inesperados, hay que parar y consultar al equipo que te trata.
+- **Privacidad:** no hay servidor, cuentas ni seguimiento. Las plantillas y el idioma elegido se guardan solo en el navegador de cada persona y no se sincronizan.
+- **No publiques pautas reales de pacientes** en repositorios, incidencias de GitHub ni en GitHub Pages.
 
 ## Pruebas
 
@@ -58,8 +105,18 @@ python -m playwright install chromium
 python tests/smoke.py
 ```
 
-Se prueban los movimientos, pausa, barra manual, prioridad de la demostración, lectura móvil, modo de movimiento reducido, idioma francés, compatibilidad de pautas y los exportadores SVG/DXF/PDF. Para usar Chromium instalado por el sistema, define `CHROMIUM_PATH`.
+Son **54 comprobaciones automáticas**: animación, pausa y barra de recorrido, prioridad de la demostración, vista móvil, modo de movimiento reducido, idioma francés, compatibilidad de pautas y exportadores SVG, DXF y PDF. Se ejecutan en cada cambio con GitHub Actions. Para usar el Chromium del sistema, define `CHROMIUM_PATH`.
+
+## Publicar tu propia copia
+
+1. Haz un fork de este repositorio o sube los archivos a la rama `main` de uno tuyo.
+2. En **Settings → Pages**, elige **Deploy from a branch**, rama `main` y carpeta `/(root)`.
+3. En un par de minutos estará en la dirección de GitHub Pages de tu repositorio.
+
+## Contribuir
+
+Las propuestas son bienvenidas, sobre todo de terapeutas de mano: ejercicios nuevos, otros dedos, mejoras de texto o traducciones. Abre una incidencia o un pull request explicando el cambio. Cualquier cambio en la lógica clínica (ángulos, orden de la serie o reglas de progresión) debe justificarse con protocolos de terapia de mano.
 
 ## Licencia
 
-MIT; consulta [`LICENSE`](LICENSE). Sin garantía de eficacia clínica.
+MIT. Consulta [`LICENSE`](LICENSE). Se ofrece sin garantía de eficacia clínica.
